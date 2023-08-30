@@ -16,7 +16,7 @@ public class S3ObjectsManager {
 				.credentialsProvider(StaticCredentialsProvider.create(AwsBasicCredentials.create(null, null))).build();
 		s3Client.putObject(
 				PutObjectRequest.builder().bucket("apache-spark-sample-code-artifacts-bucket-1")
-						.key("apache-spark-sample.jar").build(),
+						.key("apache-spark-sample-1.0.0-jar-with-dependencies.jar").build(),
 				RequestBody.fromFile(new File("target/apache-spark-sample-1.0.0-jar-with-dependencies.jar")));
 		s3Client.putObject(
 				PutObjectRequest.builder().bucket("emr-with-apache-spark-bucket-1").key("input/sample.txt").build(),
